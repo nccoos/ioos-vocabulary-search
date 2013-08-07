@@ -7,8 +7,10 @@
 
 from SPARQLWrapper import SPARQLWrapper, JSON
 
+## This was not the correct endpoint 
+# endpointURL = "http://mmisw.org/ont/?sparql"
 
-sparql = SPARQLWrapper("http://mmisw.org/ont/")
+sparql = SPARQLWrapper("http://mmisw.org/sparql")
 queryString = """
 PREFIX ioos: <http://mmisw.org/ont/ioos/parameter/>
 SELECT DISTINCT ?parameter ?definition ?unit ?property ?value 
@@ -22,16 +24,10 @@ WHERE {?parameter a ioos:Parameter .
 ORDER BY ?parameter
 """
 sparql.setQuery(queryString)
-# adding these params makes it work with MMI
-sparql.addCustomParameter("form",JSON)
-sparql.addCustomParameter("sparql",queryString)
 sparql.setReturnFormat(JSON)
+resonse = sparql.query()
 j = sparql.query().convert()
 
 j.keys()
-
-j["names"]
-
-j["values"][0:3]
 
 j

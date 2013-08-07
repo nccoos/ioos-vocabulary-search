@@ -5,9 +5,10 @@
 # modified from ORA "Learning SPARQL" by Bob DuCharme -- ex358.py
 #
 
-import urllib2, json
+import urllib, urllib2, json
 
-endpointURL = "http://mmisw.org/ont/"
+endpointURL = "http://mmisw.org/sparql"
+
 # Example1 IOOS query http://www.unc.edu/~haines/orrioos.html#Example1
 # Find IOOS parameters that have exactMatch or closeMatch to CF terms
 query = """
@@ -22,19 +23,19 @@ WHERE {?parameter a ioos:Parameter .
       } 
 ORDER BY ?parameter
 """
-escapedQuery = urllib2.quote(query)
-# MMISW uses "?sparql=" instead of "?query="
-# default return format is HTML
-requestURL = endpointURL + "?sparql=" + escapedQuery
-# return format JSON
-requestURL = endpointURL + "?form=json&sparql=" + escapedQuery
+params = {
+    "query": query,
+    "results": "json",
+    "output": "json"
+    }
+queryURL = urllib.urlencode(params)
+requestURL = endpointURL + '?' + queryURL
 request = urllib2.Request(requestURL) 
+# default return format is XML
 result = urllib2.urlopen(request).read()
-j = json.loads(result)
-j.keys()
 
-j["names"]
+# don't know how to get this is return JSON format using urllib2 or urllib
+# j = json.loads(result)
+# j.keys()
 
-j["values"][0:3]
-
-j
+# j

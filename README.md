@@ -1,7 +1,10 @@
 ioos-vocabulary-search
 ======================
 
-Testing capability of SPARQL queries to assist catalog services CSW search
+Testing capability of SPARQL queries to assist regional managers and catalog services.  Developing recipes for programmers to issue SPARQL queries to MMI ORR is one key to demonstrating how MMI ORR can enhance catalog search. Another key to this development is to visualize what the search results are. Visualizing the terms and their mappings is a key step in making registered vocabs on MMI ORR more useful. 
+
+### Dynamic SPARQL thru CGI 
+* IOOS Parameter Vocabulary Visualizer
 
 ### SPARQL - Python Examples
 * [using urllib2 example_sparql_urllib2.ipynb] (http://nbviewer.ipython.org/github/nccoos/ioos-vocabulary-search/blob/master/examples/example_sparql_urllib2.ipynb)
@@ -9,3 +12,4 @@ Testing capability of SPARQL queries to assist catalog services CSW search
 
 ### CSW - Python Examples
 * [Using OWSLIB-CSW to access NGDC Geoportal CSW (example_csw_ngdc_geoportal.ipynb)] (http://nbviewer.ipython.org/github/nccoos/ioos-vocabulary-search/blob/master/examples/example_csw_ngdc_geoportal.ipynb)
+

@@ -4,7 +4,8 @@ ioos-vocabulary-search
 Testing capability of SPARQL queries to assist regional managers and catalog services.  Developing recipes for programmers to issue SPARQL queries to MMI ORR is one key to demonstrating how MMI ORR can enhance catalog search. Another key to this development is to visualize what the search results are. Visualizing the terms and their mappings is a key step in making registered vocabs on MMI ORR more useful. 
 
 ### GUI for Dynamic SPARQL thru CGI 
-* [IOOS Parameter Vocabulary Visualizer](https://github.com/nccoos/ioos-vocabulary-viz)
+* Demo GUI [IOOS Parameter Vocabulary Visualizer](http://www.unc.edu/usr-bin/haines/orrviz.py)
+* Github Repo [ioos-vocabulary-viz](https://github.com/nccoos/ioos-vocabulary-viz)
 
 ### Query Development
 * [IOOS Vocabulary SPARQL Query Development](http://www.unc.edu/~haines/orrioos.html)
